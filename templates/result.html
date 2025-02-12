@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    
+    <header>
+        <h1><strong>Prediction Result</strong></h1>
+    </header>
+    <div>
+    <a class="back-link" href="/"><< Back to Input Form</a>
+    </div>
+    <div class="predicted-value">
+        <h2>Predicted Sales Value:</h2>
+        <p>{{ "{:.4f}".format(prediction) }}</p>
+    </div>
+
+<h2>Your Input</h2>
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Input Feature</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td>Store No</td><td>{{ features[0] }}</td></tr>
+        <tr><td>2</td><td>Day of Week</td><td>{{ features[1] }}</td></tr>
+        <tr><td>3</td><td>Date</td><td>{{ features[2] }}</td></tr>
+        <tr><td>4</td><td>Number of Customers</td><td>{{ features[3] }}</td></tr>
+        <tr><td>5</td><td>Open</td><td>{{ features[4] }}</td></tr>
+        <tr><td>6</td><td>Promo</td><td>{{ features[5] }}</td></tr>
+        <tr><td>7</td><td>State Holiday</td><td>{{ features[6] }}</td></tr>
+        <tr><td>8</td><td>School Holiday</td><td>{{ features[7] }}</td></tr>
+        <tr><td>9</td><td>Store Type</td><td>{{ features[8] }}</td></tr>
+        <tr><td>10</td><td>Assortment</td><td>{{ features[9] }}</td></tr>
+        <tr><td>11</td><td>Competition Distance</td><td>{{ features[10] }}</td></tr>
+        <tr><td>12</td><td>Competition Open Since Month</td><td>{{ features[11] }}</td></tr>
+        <tr><td>13</td><td>Competition Open Since Year</td><td>{{ features[12] }}</td></tr>
+        <tr><td>14</td><td>Promo2</td><td>{{ features[13] }}</td></tr>
+        <tr><td>15</td><td>Promo2 Since Week</td><td>{{ features[14] }}</td></tr>
+        <tr><td>16</td><td>Promo2 Since Year</td><td>{{ features[15] }}</td></tr>
+        <tr><td>17</td><td>Promo Interval</td><td>{{ features[16] }}</td></tr>
+    </tbody>
+</table>
+
+
+<footer>
+    <div class="footer-content">
+        <p>Developed by: Esmael A. Uta</p>
+        <p>All rights reserved © 2025.</p>
+        <div class="contact">
+            <p>Contact Me</p>
+            <div class="social-media">
+                <a href="https://www.github.com/Isma7471" target="_blank" aria-label="Github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/esmael-uta-28b09123b" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/ismael_uta?igsh=cHZiY2Y3aXp1NWpw" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+header {
+    text-align: center;
+    background-color: #35424a;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+h1 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px auto; /* Center the table */
+}
+th, td {
+    border: 1.5px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    background: #ffffff;
+}
+th {
+    background: #e2e2e2;
+}
+.predicted-value {
+    text-align: center;
+    font-size: 1.5em;
+    color: #35424a;
+    margin-top: 3px;
+}
+.predicted-value p {
+    font-family: monospace;
+    font-size: 2em;
+    font-weight: bold;
+    color:rgb(4, 97, 196);
+    margin: 0;
+}
+.back-link {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color:rgb(16, 58, 84);
+    font-weight: bold;
+    margin-top: 20px;
+}
+.back-link:hover {
+    color:rgb(72, 80, 242);
+    pointer: cursor;
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #35424a;
+    color: white;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+footer {
+    text-align: center;
+    background-color: #35424a;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space between text and social media */
+    align-items: center; /* Center items vertically */
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: white; /* Change icon color */
+    margin-right: 15px; /* Space between icons */
+    font-size: 1.5em; /* Size of icons */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-media a:hover {
+    color: #007bff; /* Color change on hover */
+}
+.contact {
+    text-align: left; /* Align text to the left */
+}
+
+.contact p {
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Make the "Contact Me" heading bold */
+    margin-bottom: 10px; /* Space between heading and icons */
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Forecasting - Input Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+</head>
+<body>
+
+<header>
+    <h1> Rossmann Sales Forecasting</h1>
+</header>
+
+<div class="container">
+    <h2>Enter Sales Data</h2>
+    <form method="POST" action="/predict">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Store">Store</label>
+                <input type="number" id="Store" name="Store" required min="1"> <!-- Prevent negative values -->
+            </div>
+            <div class="form-group">
+                <label for="DayOfWeek">Day of Week</label>
+                <input type="number" id="DayOfWeek" name="DayOfWeek" required min="0" max="6"> <!-- Prevent negative values and restrict to 0-6 -->
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Date">Date (YYYY-MM-DD)</label>
+                <input type="date" id="Date" name="Date" required>
+            </div>
+            <div class="form-group">
+                <label for="Customers">Customers</label>
+                <input type="number" id="Customers" name="Customers" required min="0"> <!-- Prevent negative values -->
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Open">Open</label>
+                <select id="Open" name="Open" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Promo">Promo</label>
+                <select id="Promo" name="Promo" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="StateHoliday">State Holiday</label>
+                <select id="StateHoliday" name="StateHoliday" required>
+                    <option value="0">None</option>
+                    <option value="a">Public holiday</option>
+                    <option value="b">Easter holiday</option>
+                    <option value="c">Christmas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="SchoolHoliday">School Holiday</label>
+                <select id="SchoolHoliday" name="SchoolHoliday" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="StoreType">Store Type</label>
+                <select id="StoreType" name="StoreType" required>
+                    <option value="a">Type A</option>
+                    <option value="b">Type B</option>
+                    <option value="c">Type C</option>
+                    <option value="d">Type D</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Assortment">Assortment</label>
+                <select id="Assortment" name="Assortment" required>
+                    <option value="a">Basic</option>
+                    <option value="b">Extra</option>
+                    <option value="c">Extended</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="CompetitionDistance">Competition Distance</label>
+                <input type="number" id="CompetitionDistance" name="CompetitionDistance" required min="0"> <!-- Prevent negative values -->
+            </div>
+            <div class="form-group">
+                <label for="CompetitionOpenSinceMonth">Competition Open Since Month</label>
+                <input type="number" id="CompetitionOpenSinceMonth" name="CompetitionOpenSinceMonth" required min="1" max="12"> <!-- Prevent negative values and restrict to 1-12 -->
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="CompetitionOpenSinceYear">Competition Open Since Year</label>
+                <input type="number" id="CompetitionOpenSinceYear" name="CompetitionOpenSinceYear" required min="1900"> <!-- Prevent negative values -->
+            </div>
+            <div class="form-group">
+                <label for="Promo2">Promo2</label>
+                <select id="Promo2" name="Promo2" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Promo2SinceWeek">Promo2 Since Week</label>
+                <input type="number" id="Promo2SinceWeek" name="Promo2SinceWeek" required min="1" max="52"> <!-- Prevent negative values and restrict to 1-52 -->
+            </div>
+            <div class="form-group">
+                <label for="Promo2SinceYear">Promo2 Since Year</label>
+                <input type="number" id="Promo2SinceYear" name="Promo2SinceYear" required min="1900"> <!-- Prevent negative values -->
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group" style="flex: 1 1 100%;">
+                <label for="PromoInterval">Promo Interval</label>
+                <input type="text" id="PromoInterval" name="PromoInterval" required>
+            </div>
+        </div>
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>Developed by: Esmael A. Uta</p>
+        <p>All rights reserved © 2025.</p>
+        <div class="contact">
+            <p>Contact Me</p>
+            <div class="social-media">
+                <a href="https://www.github.com/Isma7471" target="_blank" aria-label="Github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/esmael-uta-28b09123b" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/ismael_uta?igsh=cHZiY2Y3aXp1NWpw" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
