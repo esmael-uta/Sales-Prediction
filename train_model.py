@@ -7,8 +7,8 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 import pickle
 
 # Load your dataset
-data_path = '../data/processed/merged_data.csv'
-data = pd.read_csv(data_path, low_memory=False)
+#data_path = '../data/processed/merged_data.csv'
+data = pd.read_csv("C:/Users/smrc/Documents/GitHub/rossmann-sales-forecasting/data/processed/merged_data.csv", low_memory=False)
 
 # Create a custom transformer for date features
 class DateTransformer:
