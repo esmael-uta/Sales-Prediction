@@ -5,7 +5,7 @@ This is a Flask-based API that predicts sales using a machine learning model. It
 ## Features
 ✅ Machine Learning model for sales prediction  
 ✅ Flask API with a `/predict` endpoint  
-✅ Accepts JSON input and returns predictions in JSON format  
+✅ Accepts input through the input form and returns predictions Value.  
 
 ## Installation & Setup
 
