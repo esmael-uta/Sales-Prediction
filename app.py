@@ -3,13 +3,6 @@ import pickle
 import numpy as np
 import pandas as pd
 
-import logging
-
-
-# Set up logging
-logging.basicConfig(level=logging.DEBUG)
-
-
 app = Flask(__name__)
 
 # Load your trained pipeline
@@ -68,21 +61,11 @@ def predict():
         request.form['PromoInterval']
     ]
 
-    logging.debug(f'Raw features: {raw_features}')
-
     # Preprocess the input data
     input_data = preprocess_input(raw_features)
-
-    logging.debug(f'Processed input: {input_data}')
-
 
     # Make a prediction using the pipeline
     prediction = pipeline.predict(input_data)
 
-    logging.debug(f'Prediction: {prediction}')
-
     # Prepare the result to display
     return render_template('result.html', features=raw_features, prediction=prediction[0])
-
-if __name__ == '__main__':
-    app.run(debug=True)
