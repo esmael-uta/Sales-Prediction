@@ -1,4 +1,4 @@
-# Sales Prediction API 🚀
+# Sales Prediction
 
 This is a Flask-based API that predicts sales using a machine learning model. It takes input features and returns a predicted sales value.
 
@@ -11,5 +11,5 @@ This is a Flask-based API that predicts sales using a machine learning model. It
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/yourusername/sales-prediction-api.git
-   cd sales-prediction-api
+   git clone https://github.com/yourusername/sales-prediction.git
+   cd sales-prediction
